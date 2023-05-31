@@ -1,0 +1,9 @@
+frontend and backend have seperate folder
+for running backend type command "nodemon index.js"
+
+for running frontend type "ng serve"
+  >first you enter your name then you willl be able to book your ticket any no of time and required tickets is less than available
+ 
+ 
+ screenshots are available....i tried to call and connect to understand question properly....but no response
+ i have given solution what i understand
