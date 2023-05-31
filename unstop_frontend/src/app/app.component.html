@@ -1,0 +1,25 @@
+<div class="container" *ngIf="flag">
+  <form class="container" [formGroup]="submitName" (ngSubmit)="submitNamef(submitName.value)">
+    <h3>Enter your name please for registration</h3>
+    <input type="text" formControlName="username">
+    <button type="submit">book ticket</button>
+
+  </form>
+</div>
+
+<div class="container" *ngIf="flag1">
+  <h3>Hello {{this.my_val["data"].username}}</h3>
+  <h3>Current availaible tickets are:{{this.curr_ticket}}</h3>
+  <div class="box">
+    <form [formGroup]="ticketForm" class="contaier4" (ngSubmit)="bookTicket(ticketForm.value)">
+      <h3>enter no of tickets you want to bookTicket</h3>
+      <input type="text" formControlName="ticket" required>
+      <button type="submit">book ticket</button>
+    </form>
+  </div>
+  <hr>
+  <div class="lay" *ngFor="let data of iter;">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAItJREFUSEtjZKAxYKSx+Qy4LHBgYGCYz8DAoECkAx4wMDAkMjAwHEBXj8sCkAZ5Ig2HKQPpUSTWgv9QhTAHkMqH24PLB6QaiK5+1AIGQkE4GkSDPIhA2d2exFwMUw7S64isF1tGg6UQMu1ALd+GtwWk1hVYyyN8QTRqATgVDkgQkZv+seojNSJJthwA3bY4GWwZxmIAAAAASUVORK5CYII="/><del>{{this.ge()+"booked"}}</del> 
+  </div>
+</div>
+
